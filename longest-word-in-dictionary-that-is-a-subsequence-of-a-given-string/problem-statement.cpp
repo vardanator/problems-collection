@@ -16,10 +16,3 @@
  The word "kangaroo" is the longest word in D, but it isn't a subsequence of S.
 
 */
-
-solutions
- - ascii numbers
- - graph
- - skip list
- - generating all possibilities and KMP searching
- - levenstein distance ?
