@@ -6,9 +6,11 @@
 class bitset {
 public:
     bitset(int sz)
-        : size_{sz},
-          buffer_{new std::uint_fast32_t[sz]}
+        : size_{0},
+          buffer_{nullptr}
     {
+        size_ = sz / sizeof(std::uint_fast32_t) + 1;
+        buffer_ = new std::uint_fast32_t[size_];
         reset();
     }
 

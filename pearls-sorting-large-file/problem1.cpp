@@ -7,8 +7,9 @@
 #include <algorithm>
 
 void tests() {
+
+    //generate_file_of_random_integers("local.in", 1, 1000000, 700000);
     /*
-    generate_file_of_random_integers("local.in", 1, 1000000, 700000);
     bitset b{100};
     b.set(14);
     b.set(44);
@@ -20,11 +21,14 @@ void tests() {
 
 int main() {
     tests();
+    time_measurer t;
     std::set<int> s;
     std::fstream file;
     file.open("local.in", std::ios::in);
     std::copy(std::istream_iterator<int>(file), std::istream_iterator<int>(), std::inserter(s, s.end()));
+    std::fstream output;
+    output.open("problem1.out", std::ios::out);
     for (const auto& el : s) {
-        std::cout << el << std::endl;
+        output << el << std::endl;
     }
 }
